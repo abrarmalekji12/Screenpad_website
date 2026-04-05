@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
   <url>
     <loc>https://screenpad.app/</loc>
     <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://screenpad.app/screenpad.png</image:loc>
+      <image:title>ScreenPad — Remote Desktop, Mouse &amp; Keyboard for PC</image:title>
+      <image:caption>Turn your Android phone into a wireless remote desktop controller for Windows and Mac.</image:caption>
+    </image:image>
   </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://screenpad.app/privacy</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

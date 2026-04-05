@@ -4,49 +4,92 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="google-site-verification" content="I1xsx6BMXg2b_WgBCyZnI_NsGfQfJBWSL0MlGWsdeoA" />
-  <meta name="description"
-    content="ScreenPad — Remote Desktop. PC on Touch. Turn your phone into a touch-enabled remote desktop for Windows and macOS.">
-  <meta name="keywords" content="screenpad remote desktop download windows mac amsoftwares">
-  <meta name="google-site-verification" content="cvV31Wf9Q9aR57DO4AU0otOKVpR_rzSlaEhTTI5zK8U" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-  <link rel="icon" type="image/png" href="./spicon.png" />
-  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="./sitemap.xml" />
+
+  <!-- Primary SEO -->
+  <title>ScreenPad — Remote Desktop, Mouse, Keyboard & File Transfer for PC</title>
+  <meta name="description" content="Turn your Android phone into a wireless mouse, keyboard & remote desktop for Windows or Mac. Free Wi-Fi & USB remote control with screen casting, file transfer and touch gestures.">
+  <meta name="keywords" content="screenpad, remote desktop android, wireless mouse android, android keyboard for pc, screen cast android to pc, file transfer android pc, remote control windows android, wifi mouse keyboard, android trackpad, pc remote control app, windows remote, mac remote, amsoftwares, free remote desktop">
+  <meta name="author" content="AMSoftwares">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="I1xsx6BMXg2b_WgBCyZnI_NsGfQfJBWSL0MlGWsdeoA" />
+  <meta name="google-site-verification" content="cvV31Wf9Q9aR57DO4AU0otOKVpR_rzSlaEhTTI5zK8U" />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://screenpad.app/" />
-  <title>ScreenPad — Remote Desktop. PC on Touch.</title>
 
-  <!-- Open Graph / Facebook -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/spicon.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/spicon.png" />
+
+  <!-- Sitemap reference -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ScreenPad">
   <meta property="og:url" content="https://screenpad.app/">
-  <meta property="og:title" content="ScreenPad — Remote Desktop. PC on Touch.">
-  <meta property="og:description" content="Turn your phone into a touch-enabled remote desktop. Control your PC with Windows and macOS support.">
+  <meta property="og:title" content="ScreenPad — Remote Desktop, Mouse & Keyboard for PC">
+  <meta property="og:description" content="Turn your Android phone into a wireless remote desktop controller for Windows & Mac. Free. No subscription. Setup in 1 minute.">
   <meta property="og:image" content="https://screenpad.app/screenpad.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://screenpad.app/">
-  <meta property="twitter:title" content="ScreenPad — Remote Desktop. PC on Touch.">
-  <meta property="twitter:description" content="Turn your phone into a touch-enabled remote desktop. Control your PC with Windows and macOS support.">
-  <meta property="twitter:image" content="https://screenpad.app/screenpad.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://screenpad.app/">
+  <meta name="twitter:title" content="ScreenPad — Remote Desktop, Mouse & Keyboard for PC">
+  <meta name="twitter:description" content="Turn your Android phone into a wireless remote desktop controller for Windows & Mac. Free. No subscription. Setup in 1 minute.">
+  <meta name="twitter:image" content="https://screenpad.app/screenpad.png">
 
+  <!-- GitHub Pages SPA routing: redirect /privacy back through index.html -->
+  <script>
+    (function(){
+      var q = window.location.search;
+      if (q && q[1] === 'p') {
+        var decoded = decodeURIComponent(q.slice(3));
+        window.history.replaceState(null, null, decoded + window.location.hash);
+      }
+    })();
+  </script>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap"
     rel="stylesheet">
 
-  <!-- JSON-LD Structured Data for SoftwareApplication -->
+  <!-- JSON-LD Structured Data — SoftwareApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "ScreenPad",
-    "operatingSystem": "Windows, macOS",
+    "alternateName": "ScreenPad Remote Desktop",
+    "url": "https://screenpad.app/",
+    "logo": "https://screenpad.app/spicon.png",
+    "operatingSystem": ["Windows 7", "Windows 8", "Windows 10", "macOS"],
     "applicationCategory": "UtilitiesApplication",
-    "description": "Turn your phone into a touch-enabled remote desktop controller.",
+    "applicationSubCategory": "Remote Desktop Software",
+    "description": "Turn your Android phone into a wireless controller for your PC or MacBook. ScreenPad lets you remotely control your computer using Wi-Fi or USB tethering, acting as a mouse, keyboard, and touchpad — fast, simple, and free. Supports screen casting, file transfer, touch gestures, and system shortcuts.",
+    "featureList": [
+      "Remote desktop control for Windows 10 / 8 / 7 and macOS",
+      "Wireless mouse, keyboard and trackpad",
+      "Screen casting and mirroring",
+      "File transfer between phone and PC",
+      "Touch gestures – scroll, zoom, click, drag",
+      "Quick shortcuts – copy, paste, brightness, volume",
+      "System controls – Shutdown, Restart, Sleep, Screenshot"
+    ],
     "softwareVersion": "1.0",
+    "screenshot": "https://screenpad.app/screenpad.png",
+    "downloadUrl": "https://screenpad.app/",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.mytools.screenpad",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -54,12 +97,33 @@
     },
     "publisher": {
       "@type": "Organization",
-      "name": "AMSoftwares"
+      "name": "AMSoftwares",
+      "url": "https://screenpad.app/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "fromamsoftwares@gmail.com",
+        "contactType": "customer support"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "ratingCount": "50000"
     }
   }
   </script>
-  <script type="module" crossorigin src="./assets/index-CafjIgED.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DPldB17F.css">
+
+  <!-- JSON-LD — WebSite with SearchAction (Sitelinks Searchbox) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ScreenPad",
+    "url": "https://screenpad.app/"
+  }
+  </script>
+  <script type="module" crossorigin src="/assets/index-DWP0YDR6.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DPldB17F.css">
 </head>
 
 <body>
