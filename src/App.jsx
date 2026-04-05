@@ -55,7 +55,7 @@ function Navbar() {
         <div className="container">
           <div className="nav-inner">
             <a href="#home" className="nav-brand">
-              <img src="/screenpad.png" alt="ScreenPad logo" />
+              <img src="/spicon.png" alt="ScreenPad logo" />
               <span>APP</span>&nbsp;ScreenPad
             </a>
 
@@ -487,7 +487,7 @@ function DownloadPopup() {
         <button className="popup-close" onClick={close}>×</button>
 
         <div className="popup-title-row">
-          <img src="/screenpad.png" alt="" />
+          <img src="/spicon.png" alt="" />
           <h3>Download ScreenPad</h3>
         </div>
         <p className="popup-subtitle">Choose your desktop platform</p>
@@ -540,7 +540,7 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="#home" className="nav-brand" style={{ textDecoration: 'none' }}>
-              <img src="/screenpad.png" alt="ScreenPad" />
+              <img src="/spicon.png" alt="ScreenPad" />
               <span>APP</span>&nbsp;ScreenPad
             </a>
             <p>
