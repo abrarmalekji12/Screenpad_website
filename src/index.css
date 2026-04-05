@@ -1,0 +1,3 @@
+/* minimal reset — all design lives in App.css */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+#root { width: 100%; }
