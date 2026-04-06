@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 /* ─── API ─── */
@@ -46,7 +47,7 @@ function Navbar() {
     { href: '#home', label: 'Home' },
     { href: '#screenshot', label: 'Screenshots' },
     { href: '#about', label: 'About' },
-    { href: 'https://desktopapp.pythonanywhere.com/privacy', label: 'Privacy Policy', external: true },
+    { href: '/privacy', label: 'Privacy Policy' },
   ];
 
   return (
@@ -62,9 +63,10 @@ function Navbar() {
             <ul className="nav-links">
               {links.map(l => (
                 <li key={l.label}>
-                  <a href={l.href} target={l.external ? '_blank' : undefined} rel={l.external ? 'noreferrer' : undefined}>
-                    {l.label}
-                  </a>
+                  {l.href.startsWith('/') && !l.external
+                    ? <Link to={l.href}>{l.label}</Link>
+                    : <a href={l.href} target={l.external ? '_blank' : undefined} rel={l.external ? 'noreferrer' : undefined}>{l.label}</a>
+                  }
                 </li>
               ))}
             </ul>
@@ -86,12 +88,14 @@ function Navbar() {
       <div className={`mobile-menu${mobileOpen ? ' open' : ''}`}>
         <button className="mobile-menu-close" onClick={() => setMobileOpen(false)}>×</button>
         {links.map(l => (
-          <a key={l.label} href={l.href}
-            target={l.external ? '_blank' : undefined}
-            rel={l.external ? 'noreferrer' : undefined}
-            onClick={() => setMobileOpen(false)}>
-            {l.label}
-          </a>
+          l.href.startsWith('/') && !l.external
+            ? <Link key={l.label} to={l.href} onClick={() => setMobileOpen(false)}>{l.label}</Link>
+            : <a key={l.label} href={l.href}
+                target={l.external ? '_blank' : undefined}
+                rel={l.external ? 'noreferrer' : undefined}
+                onClick={() => setMobileOpen(false)}>
+                {l.label}
+              </a>
         ))}
         <button className="btn btn-primary" style={{ marginTop: 12 }} onClick={() => { setMobileOpen(false); document.getElementById('desktopPopup').classList.add('open'); }}>
           Download Now
@@ -562,7 +566,7 @@ function Footer() {
           <div className="footer-links">
             <h4>Company</h4>
             <ul>
-              <li><a href="https://desktopapp.pythonanywhere.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
               <li><a href="https://desktopapp.pythonanywhere.com/sphelp" target="_blank" rel="noreferrer">Help &amp; Support</a></li>
               <li><a href="http://flutterpilot.com" target="_blank" rel="noreferrer">FlutterPilot</a></li>
             </ul>
