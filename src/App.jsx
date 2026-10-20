@@ -6,6 +6,13 @@ import './App.css';
 /* ─── API ─── */
 const API = 'https://desktopapp.pythonanywhere.com/';
 
+/* ─── Desktop downloads ─── */
+const DOWNLOADS = {
+  windowsX64: 'https://storage.googleapis.com/flutter-visual-builder-staging.appspot.com/screenpadReleases/windows/latest/ScreenPad-windows-x64-latest.exe',
+  macArm64: 'https://storage.googleapis.com/flutter-visual-builder-staging.appspot.com/screenpadReleases/macos/latest/ScreenPad-macos-arm64-latest.dmg',
+  macX64: 'https://storage.googleapis.com/flutter-visual-builder-staging.appspot.com/screenpadReleases/macos/latest/ScreenPad-macos-x64-latest.dmg',
+};
+
 function getCookie(name) {
   let v = null;
   if (document.cookie && document.cookie !== '') {
@@ -483,7 +490,7 @@ function Feedback() {
 function DownloadPopup() {
   function close() { document.getElementById('desktopPopup').classList.remove('open'); }
 
-  const goTo = (path) => { window.location.href = API + path; close(); };
+  const goTo = (url) => { window.location.href = url; close(); };
 
   return (
     <div className="popup-overlay" id="desktopPopup" onClick={e => { if (e.target === e.currentTarget) close(); }}>
@@ -501,13 +508,9 @@ function DownloadPopup() {
         <div className="popup-platform">
           <div className="popup-platform-header"><span>🪟</span> Windows</div>
           <div className="popup-btns">
-            <button className="popup-dl-btn" onClick={() => goTo('download/data/ScreenPad_po_64xbit_pc__dot_exe')}>
+            <button className="popup-dl-btn" onClick={() => goTo(DOWNLOADS.windowsX64)}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
               64-bit
-            </button>
-            <button className="popup-dl-btn" onClick={() => goTo('download/data/ScreenPad_po_32xbit_pc__dot_exe')}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              32-bit
             </button>
           </div>
         </div>
@@ -515,11 +518,11 @@ function DownloadPopup() {
         <div className="popup-platform">
           <div className="popup-platform-header"><span>🍎</span> macOS</div>
           <div className="popup-btns">
-            <button className="popup-dl-btn" onClick={() => goTo('download/data/Screenpad-arm64_dot_dmg')}>
+            <button className="popup-dl-btn" onClick={() => goTo(DOWNLOADS.macArm64)}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
               Apple Silicon
             </button>
-            <button className="popup-dl-btn" onClick={() => goTo('download/data/Screenpad-x86_64_dot_dmg')}>
+            <button className="popup-dl-btn" onClick={() => goTo(DOWNLOADS.macX64)}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
               Intel x86_64
             </button>
